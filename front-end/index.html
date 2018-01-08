@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Handle Promises using Axios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>
+                <a href="http://codingthesmartway.com/courses/complete-javascript/" target="_blank">[ONLINE COURSE] - The Complete JavaScript Course: Build a Real-World Project</a>
+            </strong>
+            +++ Master JavaScript with the most complete JavaScript course on the market! Includes projects, challenges, final exam,
+            ES6 +++ You will gain a deep and true understanding of how JavaScript works behind the scenes. +++
+        </div>
+
+        <h1>Handle Promises with Axios</h1>
+        <section class="jumbotron">
+            <h2>Welcome to Axios</h2>
+            <p>This applications uses Axios. Axios is a Promise-based HTTP client for JavaScript which can be used in your front-end
+                application and in your Node.js backend.</p>
+        </section>
+
+        <!-- ########### GET REQUESTS ############ -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">GET Request</div>
+            <div class="panel-body">
+                <button class="btn btn-primary" onclick="performGetRequest1()">Get All TODOS</button>
+                <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+                <div class="panel-body" id="getResult1"></div>
+            </div>
+        </div>
+
+        <!-- ########### GET REQUESTS WITH PARAMS ############ -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">GET Request with Parameters</div>
+            <div class="panel-body">
+                <input type="text" class="form-control" id="todoId" placeholder="TODO Id ...">
+                <br>
+                <button class="btn btn-primary" onclick="performGetRequest2()">Get TODO</button>
+                <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+                <div class="panel-body" id="getResult2"></div>
+            </div>
+        </div>
+
+        <!-- ########### POST REQUESTS ############ -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">POST Request</div>
+            <div class="panel-body">
+                <form class="form-inline" id="todoInputForm">
+                    <input type="text" class="form-control" id="todoTitle" placeholder="TODO Title ...">
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+                <br>
+                <button class="btn btn-warning" onclick="clearOutput()">Clear</button>
+                <div class="panel-body" id="postResult"></div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy
+                <a href="http://codingthesmartway.com" target="_blank">CodingTheSmartWay.com</a> |
+                <a href="http://codingthesmartway.com/imprint" target="_blank">Imprint</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
